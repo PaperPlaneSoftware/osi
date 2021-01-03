@@ -1,0 +1,54 @@
+//
+// Color system
+//
+
+$white:    #ffffff !default;
+$gray-100: #e8e8e8 !default;
+$gray-200: #d0d0d0 !default;
+$gray-300: #b8b8b8 !default;
+$gray-400: #a0a0a0 !default;
+$gray-500: #888888 !default;
+$gray-600: #707070 !default;
+$gray-700: #585858 !default;
+$gray-800: #404040 !default;
+$gray-900: #282828 !default;
+$black:    #000000 !default;
+
+$primary:       #19c1d4 !default;
+$secondary:     $black !default;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif:      Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base:              .875rem !default;
+$headings-font-weight:        400 !default;
+
+//then bootstrap & bootstrap-vue should be added after 
+//so that they inherit the custom SCSS variables
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair', serif;
+    font-weight: 400;
+    color: $black;
+}
+
+a {
+    color: $black;
+
+    &:active {
+        color: $black;
+        text-decoration: underline;
+    }
+}
